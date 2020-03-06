@@ -23,7 +23,7 @@ var connection = mysql.createConnection({
     user: process.env.RDS_USERNAME,
     password: process.env.RDS_PASSWORD
 });
-// Adding Comment
+
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(express.static(__dirname + '/resources'));
