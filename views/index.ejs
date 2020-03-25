@@ -36,11 +36,10 @@
 
                 <button class="rails-theme-toggle-<%=theme%>" id="rails-theme-toggle">
                     <span class="rails-tooltip">
-                      <% if(theme == 'light'){ %>
-                        <i class="fa fa-lightbulb-o" style="font-size:36px;color:rgb(12, 0, 0)"></i>
-                      <%}
-                      else{%>
-                          <i class="fa fa-lightbulb-o" style="font-size:36px;color:rgb(255, 254, 254)"></i> <%}%>
+                        <label class="rails-switch">
+                            <input type="checkbox" checked>                            
+                            <span class="rails-slider-<%=theme%> round"></span>
+                        </label>    
                         <span class="rails-tooltiptext-<%=theme%>" id="theme-status">
                             <% if(theme == 'light') { %>Dark<% } else { %>Light<% } %> Theme
                         </span>
@@ -161,22 +160,25 @@
             });
 
             function rate(userRating) {
-              alert("Thanks for your feedback!");
+                var endPointUrl = getEndpointUrl("rating");
+                var data = {
+                    rating: userRating
+                };
 
-              var endPointUrl = getEndpointUrl("rating");
-              var data = {
-                rating: userRating
-              };
-
-              $.ajax({
-                  type: 'POST',
-                  data: JSON.stringify(data),
-                  contentType: 'application/json',
-                  url: endPointUrl,
-                  success: function(data) {
-                      console.log('Rating posted.');
-                  }
-              });
+                $.ajax({
+                    type: 'POST',
+                    data: JSON.stringify(data),
+                    contentType: 'application/json',
+                    url: endPointUrl,
+                    success: function(data) {
+                        console.log('Rating posted.');
+                        alert("Thanks for your feedback!");
+                    },
+                    error: function(err) {
+                        console.log('Unable to post rating. Try again later.');
+                        alert("Unable to post rating due to technological limitations. Please, try again in a few minutes.");
+                    }
+                });
             }
         </script>
     </body>
