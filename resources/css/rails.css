@@ -16,10 +16,10 @@
 }
 
 .rails-bg-light {
-  background: -webkit-linear-gradient(110deg, #34e89e 40%,#0f3443  60%);
-  background: -o-linear-gradient(110deg, #34e89e 40%, #0f3443 60%);
-  background: -moz-linear-gradient(110deg, #34e89e 40%, #0f3443 60%);
-  background: linear-gradient(110deg, #34e89e 40%, #0f3443 60%);
+  background: -webkit-linear-gradient(110deg, #34ebeb 40%,#0f3443  60%);
+  background: -o-linear-gradient(110deg, #34ebeb 40%, #0f3443 60%);
+  background: -moz-linear-gradient(110deg, #34ebeb 40%, #0f3443 60%);
+  background: linear-gradient(110deg, #34ebeb 40%, #0f3443 60%);
 }
 
 .rails-bg-dark {
@@ -375,7 +375,7 @@ rails-tweet-holder {
   height: 34px;
 }
 
-.rails-switch input { 
+.rails-switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -388,7 +388,7 @@ rails-tweet-holder {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(209, 231, 12, 0.781);
+  background-color: rgba(1, 64, 69, 0.781);
   -webkit-transition: .4s;
   transition: .4s;
 }
