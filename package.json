@@ -9,7 +9,7 @@
   "author": "RAILS",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.3",
+    "body-parser": "^1.20.6",
     "cookie-parser": "^1.4.7",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.10",
